@@ -26,7 +26,8 @@ public class UserController {
 
     @RequestMapping("/selectByUserId/{id}")
     @ResponseBody
-    public User selectByUserId(@PathVariable Long id){
+    public User selectByUserId(@PathVariable Long id)
+    {
         return userService.selectUserById(id);
     }
 }
