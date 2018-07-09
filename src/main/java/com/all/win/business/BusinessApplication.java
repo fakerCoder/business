@@ -1,9 +1,11 @@
 package com.all.win.business;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan(basePackages = {"com.all.win.business.dao"})
 public class BusinessApplication {
 
     public static void main(String[] args) {

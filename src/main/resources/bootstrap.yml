@@ -1,0 +1,46 @@
+spring:
+#  application:
+#    name: biz-mis
+  # 上传文件大小限制
+  http:
+    multipart.enabled: true
+    multipart.max-file-size: 100Mb
+    multipart.max-request-size: 100Mb
+  # 国际化
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages
+  datasource:
+      name: dataSource
+#      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      jmx-enabled: false
+  jmx:
+    enabled: true
+  jackson:
+    locale: zh_CN
+    time-zone: Asia/Shanghai
+  sleuth:
+    sampler:
+      percentage: 1.0
+#  cloud:
+#    config:
+#      uri: http://cloud-config.fclassroom.cn
+#      username: springCloudUser
+#      password: 36be3a328fa4fa08725ba013bc9489be81e3fe153c8780504
+
+mybatis:
+  config-location: classpath:config/mybatis-config.xml
+  mapper-locations: classpath:mapper/*/*.xml
+
+logging:
+  config: classpath:logback-boot.xml
+
+#fclassroom:
+#  commons:
+#      utils:
+#        resource-path: i18n/messages
+#
+#ribbon:
+#  ConnectTimeout: 60000
+#  ReadTimeout: 60000

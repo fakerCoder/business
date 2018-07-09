@@ -1,50 +1,37 @@
-package com.all.win.business.pojo;
+package com.all.win.business.entity;
 
-public class User {
-    /**
-     * 用户id
-     */
+import java.io.Serializable;
+
+/**
+ * @Description: 基础账号信息类
+ * @Author: fakerCoder
+ * @Date: 2018/7/5 11:43
+ * @Version: 1.0.0
+ */
+public class User implements Serializable {
     private Long id;
-    /**
-     * 姓名
-     */
+
     private String name;
-    /**
-     * 年龄
-     */
+
     private Byte age;
-    /**
-     * 性别
-     */
+
     private Byte gender;
-    /**
-     * 地址
-     */
+
     private String address;
-    /**
-     * 座机
-     */
+
     private String phone;
-    /**
-     * 手机号码
-     */
+
     private String mobilePhone;
-    /**
-     * 邮箱地址
-     */
+
     private String email;
-    /**
-     * QQ信息
-     */
+
     private String qq;
-    /**
-     * 微信号
-     */
+
     private String wx;
-    /**
-     * 头像
-     */
+
     private String photo;
+
+    private static final long serialVersionUID = 1L;
 
     public Long getId() {
         return id;
@@ -59,7 +46,7 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public Byte getAge() {
@@ -83,7 +70,7 @@ public class User {
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.address = address == null ? null : address.trim();
     }
 
     public String getPhone() {
@@ -91,7 +78,7 @@ public class User {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.phone = phone == null ? null : phone.trim();
     }
 
     public String getMobilePhone() {
@@ -99,7 +86,7 @@ public class User {
     }
 
     public void setMobilePhone(String mobilePhone) {
-        this.mobilePhone = mobilePhone;
+        this.mobilePhone = mobilePhone == null ? null : mobilePhone.trim();
     }
 
     public String getEmail() {
@@ -107,7 +94,7 @@ public class User {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email == null ? null : email.trim();
     }
 
     public String getQq() {
@@ -115,7 +102,7 @@ public class User {
     }
 
     public void setQq(String qq) {
-        this.qq = qq;
+        this.qq = qq == null ? null : qq.trim();
     }
 
     public String getWx() {
@@ -123,7 +110,7 @@ public class User {
     }
 
     public void setWx(String wx) {
-        this.wx = wx;
+        this.wx = wx == null ? null : wx.trim();
     }
 
     public String getPhoto() {
@@ -131,6 +118,6 @@ public class User {
     }
 
     public void setPhoto(String photo) {
-        this.photo = photo;
+        this.photo = photo == null ? null : photo.trim();
     }
 }

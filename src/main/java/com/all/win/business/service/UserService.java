@@ -1,22 +1,32 @@
 package com.all.win.business.service;
 
+import com.all.win.business.entity.User;
 
-import com.all.win.business.dao.UserMapper;
-import com.all.win.business.pojo.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+/**
+ * @Description:
+ * @Author: fakerCoder
+ * @Date: 2018/7/5 11:44
+ * @Version: 1.0.0
+ */
+public interface UserService {
 
-@Service
-public class UserService {
+    /**
+     * @Description:
+     * @Author: fakerCoder
+     * @Date: 2018/7/5 11:39
+     * @Param: user
+     * @Return: int
+     */
+    int insertUser(User user);
 
-    @Autowired
-   private UserMapper userMapper;
-
-    public int insertUser(User user){
-        return userMapper.insertUser(user);
-    }
-    public User selectUserById(Long id){
-        User user = userMapper.selectByUserId(id);
-        return user;
-    }
+    /**
+     * @Description:
+     * @Author: fakerCoder
+     * @Date: 2018/7/5 11:39
+     * @Param: id
+     * @Param name
+     * @Param sex
+     * @Return: com.all.win.business.entity.User
+     */
+    User selectUserById(Long id);
 }
